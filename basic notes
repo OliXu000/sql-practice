@@ -1,5 +1,7 @@
 SELECT * FROM USER
 WHERE City IN ('Beijing', 'Shanghai');
 选两个城市
+
 SELECT * FROM USER WHERE City BETWEEN 'Beijing' AND 'Shanghai';
 等价于 WHERE City >= 'Beijing' AND City <= 'Shanghai'
+选择City 介于 Beijing 和 Shanghai（按字母顺序）之间的所有记录
