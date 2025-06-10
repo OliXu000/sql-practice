@@ -5,3 +5,9 @@ WHERE City IN ('Beijing', 'Shanghai');
 SELECT * FROM USER WHERE City BETWEEN 'Beijing' AND 'Shanghai';
 等价于 WHERE City >= 'Beijing' AND City <= 'Shanghai'
 选择City 介于 Beijing 和 Shanghai（按字母顺序）之间的所有记录
+
+ALTER TABLE 表名
+MODIFY 列名 数据类型 DEFAULT 默认值;
+ex： ALTER TABLE student MODIFY class CHAR(10) DEFAULT '暂未输入';
+CHAR(n)  有固定长度，n个字节
+VARCHAR(n) 无固定长度
