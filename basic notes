@@ -11,3 +11,20 @@ MODIFY 列名 数据类型 DEFAULT 默认值;
 ex： ALTER TABLE student MODIFY class CHAR(10) DEFAULT '暂未输入';
 CHAR(n)  有固定长度，n个字节
 VARCHAR(n) 无固定长度
+
+1. ALTER TABLE：修改表结构
+-- 添加一列
+ALTER TABLE student ADD class CHAR(10);
+
+-- 修改列默认值
+ALTER TABLE student MODIFY class CHAR(10) DEFAULT '暂未输入';
+
+-- 删除一列
+ALTER TABLE student DROP COLUMN age;
+
+2. INSERT INTO：向表中添加数据（插入记录）
+-- 插入完整一行
+INSERT INTO student (id, name, class) VALUES (1, 'Alice', '一班');
+
+-- 插入部分字段（其他使用默认值）
+INSERT INTO student (name) VALUES ('Bob');
